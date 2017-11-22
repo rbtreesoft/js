@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			/*
+			  href        链接的地址
+			  src         图片的地址
+
+			  href与src取到的是绝对地址，不是属性里的值
+			  切记不要拿href与src取到的值去做判断
+			*/
+
+			window.onload=function(){
+				var pic=document.getElementById('pic');
+				var link=document.getElementById('link');
+				
+				console.log(pic.src);    //file:///Users/huqian/Desktop/js/img.jpg
+				console.log(link.href);    //file:///Users/huqian/Desktop/js/1-js%E7%9A%84%E4%BD%8D%E7%BD%AE.html
+			}
+		</script>
+		<img id="pic" src="img.jpg"> 
+		<a id="link" href="1-js的位置.html">js</a>
+	</body>
+</html>

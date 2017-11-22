@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="button" id="btn" value="按钮" style="width:100px;height:100px;
+		background:#f00;font-size:20px">
+		<script>
+			/*
+			  属性操作方式
+			  	  1、.
+			  	      元素.属性名
+			  	      如果属性是单一属性，用点操作符是获取不到的，而且还会报错
+			  	      如果想用点操作符去获取带‘-’的属性，那首先要把‘-’去掉，然后把‘-’后面的第一个字母大写
+			  	  2、[]
+			  	      如果属性中带‘-’，用[]的方式去操作属性
+			*/
+			var btn=document.getElementById('btn');
+			btn.onclick=function(){
+				console.log(btn.type);    //button
+				console.log(btn.id);      //btn
+				console.log(btn.value);    //按钮
+
+				btn.value='小按钮';        //修改属性
+
+				console.log(btn.style.width);    //100px
+				console.log(btn.style.height);    //100px
+				console.log(btn.style.background);    //rgb(255,0,0)
+				console.log(btn.style['font-size']);    //20px
+				console.log(btn.style.fontSize);    //20px	
+				console.log(btn["value"]);    //小按钮
+			}
+		</script>
+	</body>
+</html>

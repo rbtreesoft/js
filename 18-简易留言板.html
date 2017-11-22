@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#box{
+				width:500px;
+				height:500px;
+				border:5px solid #f00;
+			}
+		</style>
+		<script>
+			/*
+			  需求：点击按钮，把输入框里的内容显示到box里
+
+			  分析：
+			      1、拿到按钮、文本框、box
+			      2、给按钮添加点击事件
+			            1、获取用户输入的内容(text.value)
+			            2、把获取到的内容显示到box里面
+			*/
+
+			window.onload=function(){
+				var btn=document.getElementById('btn');
+				var text=document.getElementById('text');
+				var box=document.getElementById('box');
+
+				btn.onclick=function(){
+					var val=text.value;
+					var newtext='<p>'+val+'</p>';
+					
+					//innerHTML
+					//字符串拼接
+
+					//新输入的内容    '<p>'+val+'</p>'
+					//原来的内容      box.innerHTML
+
+					//box.innerHTML=box.innerHTML+newtext;    //新内容在下面显示
+					box.innerHTML=newtext+box.innerHTML;    //新内容在上面显示
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<input type="text" id="text" value="">
+		<input type="button" id="btn" value="提交">
+		<div id="box"></div>
+	</body>
+</html>

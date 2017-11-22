@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div class="kaivon" id="kaivon"></div>
+		<script>
+			/*
+			  className    
+			      注意：class是js中的一个保留字，是不允许使用的
+			           在获取class的时候，不能用class，要用ClassName
+			*/
+			var kaivon=document.getElementById('kaivon');
+				
+			console.log(kaivon.class);    //undefined
+			console.log(kaivon.className);    //kaivon
+		</script>
+	</body>
+</html>

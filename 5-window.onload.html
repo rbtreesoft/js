@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#box{
+				width:100px;
+				height:100px;
+				background:green;
+			}
+		</style>
+		<script>
+			window.onload=function(){
+				document.getElementById('btn').onclick=function(){
+					document.getElementById('btn').style.background="yellow";
+					document.getElementById('box').style.width="300px";
+					document.getElementById('box').style.height="200px";
+				}
+			}    /* window.onload什么时候用？
+		 		 当js代码需要获取页面中的元素的时候，如果script放在元素的前面，那就需要加window.onload
+		 		 如果script放在元素后面，那就不需要加window.onload */
+		</script>   	 
+	</head>
+	<body>
+		<input type="button" id="btn" value="按钮">
+		<div id="box"></div>
+	</body>
+</html>
