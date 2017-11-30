@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			img{
+				display:block;
+			}
+		</style>
+		<script>
+			/*
+			  需求：点击下一张按钮，让图片切换成下一张图片；点击上一张按钮，让图片切换成上一张图片
+
+			  分析：
+			      1、获取到下一张按钮、图片
+			      2、给按钮添加点击事件
+			            1、用属性操作的方法去修改图片的src
+			            2、把数字存在一个变量里，点击下一张，就让这个变量加1。用字符串拼接的方法去修改图片的src属性
+			*/
+
+			window.onload=function(){
+				var perv=document.getElementById('prev');
+				var next=document.getElementById('next');
+				var pic=document.getElementById('pic');
+				var n=1;
+
+				next.onclick=function(){
+					n++;
+					if(n>8){
+						n=8;
+					}
+					pic.src='images/img'+n+'.jpg';
+				}
+
+				prev.onclick=function(){
+					n--;
+					if(n<1){
+						n=1;
+					}
+					pic.src='images/img'+n+'.jpg';
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" id="prev" value="上一张">
+		<input type="button" id="next" value="下一张">
+		<img src="images/img1.jpg" id="pic" alt="">
+	</body>
+</html>

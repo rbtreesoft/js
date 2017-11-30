@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			/*
+			  getElementsByClassName(class名称)    通过class去获取一组元素
+
+			  主语(限制范围):
+			    document        从整个文档中去获取一组元素
+			    父级             从父级下面去获取一组元素
+
+			  获取到的结果也是一个类数组
+
+			  怎么取其中一个元素
+			    用下标的方法去获取其中一个元素
+			*/
+
+			window.onload=function(){
+				var greens=document.getElementsByClassName('green');
+				console.dir(greens);
+				greens[0].style.background='#af1';
+
+				var color=document.getElementById('color');
+				var greens1=color.getElementsByClassName('green');
+				console.dir(greens1);
+				greens1[0].style.background='#1f0';
+			}
+		</script>
+	</head>
+	<body>
+		<ul>
+			<li>red</li>
+			<li class="green">green</li>
+			<li>blue</li>
+			<li>yellow</li>
+			<li>pink</li>
+		</ul>
+		<ul id="color">
+			<li>red</li>
+			<li class="green">green</li>
+			<li>blue</li>
+			<li>yellow</li>
+			<li>pink</li>
+		</ul>
+	</body>
+</html>

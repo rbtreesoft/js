@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="button" id="btn" value="按钮" style="width:100px;height:100px;
+		background:#f00;font-size:20px">
+		<script>
+			/*
+			  属性    元素身上所具有的一些特征
+
+			  1、系统自带的属性
+			  	type、id、style、value、src
+			  2、自己添加的属性
+			  	自定义属性，系统当中是没有的，我们自己添加的
+			  	系统自带的属性，满足不了需求时，需要自定义属性
+			*/
+			var btn=document.getElementById('btn');
+
+			    btn.onclick=function(){
+			    	console.log(btn.type);    //button
+					console.log(btn.id);      //btn
+					console.log(btn.value);    //按钮
+
+					btn.shape='ellipse';        //修改属性
+
+					console.log(btn.shape);    //ellipse
+					console.log(btn['shape']);    //ellipse
+			    }
+				
+		</script>
+	</body>
+</html>
